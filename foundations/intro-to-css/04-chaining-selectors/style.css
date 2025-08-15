@@ -1,1 +1,18 @@
 /* Add CSS Styling */
+
+/* style.css */
+
+/* avatar + proportioned: 300px wide, keep original square proportions (no hardcoded height) */
+.avatar.proportioned {
+    width: 300px;
+    height: auto;
+  }
+  
+  /* avatar + distorted: 200px wide, height is 2x width (hardcoded) */
+  .avatar.distorted {
+    width: 200px;
+    height: 400px; /* intentionally distorted */
+  }
+  
+  /* Do not style .original images — they are for comparison only */
+  
