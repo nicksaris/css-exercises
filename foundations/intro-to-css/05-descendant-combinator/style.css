@@ -1,0 +1,10 @@
+/* Only <p> elements that are descendants of .container get these styles */
+.container .text {
+    background: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  /* (No other rules needed—p.text outside .container remain unstyled) */
+  
