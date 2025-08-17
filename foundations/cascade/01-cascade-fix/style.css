@@ -1,42 +1,65 @@
+/* ===== Base ===== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  color: #222;
+  line-height: 1.45;
+  margin: 32px;
 }
 
-.para,
-.small-para {
-  color: hsl(0, 0%, 0%);
-  font-weight: 800;
-}
-
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
+/* ===== Paragraphs ===== */
+/* .para = extra bold; .para.small-para = extra bold + smaller size */
 .para {
-  font-size: 22px;
+  font-weight: 800;            /* ensure bold/extra-bold */
+  font-size: 18px;
+  margin: 0 0 10px;
 }
-
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
-
-.button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.child {
-  color: rgb(0, 0, 0);
+.para.small-para {
+  font-size: 14px;             /* smaller paragraph, still extra-bold */
   font-weight: 800;
-  font-size: 14px;
 }
 
-div.text {
-  color: rgb(0, 0, 0);
-  font-size: 22px;
-  font-weight: 100;
+/* ===== Buttons ===== */
+/* Base button class */
+.button {
+  display: inline-block;
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  background: #eee;
+  color: #333;
+  border-radius: 0;
+  font-weight: 600;            /* readable default weight */
 }
+
+/* Match your exact IDs + classes for high specificity (prevents overrides) */
+#confirm-button.button.confirm {
+  background: #35a469;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 800;            /* extra bold */
+}
+#cancel-button.button.cancel {
+  background: #f0ecec;
+  color: #000000;
+  border-radius: 10px;
+  font-weight: 800;            /* extra bold */
+}
+
+/* ===== Text blocks ===== */
+/* Base .text is thin/normal; .text.child is smaller + extra bold */
+.text {
+  font-weight: 300;            /* thin text */
+  font-size: 16px;
+  margin: 10px 0;
+}
+.text.child {
+  font-size: 14px;             /* smaller child div */
+  font-weight: 800;            /* ex*
